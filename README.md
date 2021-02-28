@@ -26,5 +26,5 @@ Java, JDK, MySQL, Eclipse IDE, Git, GitHub e Trello.
 
 Configurações:
 
-Modificar endereço do link de conexão com o banco de dados de acordo com sua preferência.
-Caminho: GestaoPessoas/src/main/java/model/factory/connection/ConnectionFactory.java (linha XX).
+Modificar endereço da url de conexão com o banco de dados e credenciais de acesso de acordo com sua preferência, em "hibernate.cfg.xml".
+Caminho: GestaoPessoas/src/main/resources/hibernate.cfg.xml (linhas 10 e 12 e 13).
