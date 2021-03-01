@@ -28,8 +28,8 @@ public class Main {
 		RoomDAO roomDAO = new RoomDAOImpl();
 		
 		System.out.println(
-				"Digite um numero para selecionar uma opção"
-				+ "\n1 - Sala do café"
+				"Digite um numero para selecionar uma opÃ§Ã£o"
+				+ "\n1 - Sala do cafÃ©"
 				+ "\n2 - Sala do evento"
 				+ "\n3 - Pessoas do evento"
 				+ "\n4 - Mudar etapa do evento"
@@ -52,7 +52,7 @@ public class Main {
 			case COFFE:
 				while (sMenu != SecondaryMenu.EXIT) {
 					System.out.println(
-							"Café - Opções"
+							"CafÃ© - OpÃ§Ãµes"
 							+ "\n1 - Cadastrar"
 							+ "\n2 - Sair");
 					try {
@@ -69,10 +69,12 @@ public class Main {
 
 					case INSERT:
 
-							System.out.println("Digite o nome da sala de café:");
+							System.out.println("Digite o nome da sala de cafÃ©:");
 							String name = in.next();
+
 							coffeDAO.insertCoffe(new Coffe(name));
-							System.out.println("Sala do café inserida.");
+
+							System.out.println("Sala do cafÃ© inserida.");
 
 						break;
 
@@ -84,7 +86,7 @@ public class Main {
 			case ROOM:
 				while (sMenu != SecondaryMenu.EXIT) {
 					System.out.println(
-							"Sala - Opções"
+							"Sala - OpÃ§Ãµes"
 							+ "\n1 - Cadastrar"
 							+ "\n2 - Sair");
 					try {
@@ -103,8 +105,21 @@ public class Main {
 
 							System.out.println("Digite o nome da sala de evento:");
 							String name = in.next();
-							System.out.println("")
-							roomDAO.insertRoom(new Room(name));
+
+							System.out.println("Digite a capacidade da sala");
+							int capacity = in.next();
+
+							System.out.println("Listando salas de cafÃ©");
+							List<Coffe> coffe = coffeDAO.listCoffe();
+							for (int i = 0; i < coffe.size(); i++) {
+								System.out.println(i + " " + coffe.get(i).getName());
+							}
+
+							System.out.println("Digite o numero da sala de cafÃ©:");
+							int numberCoffe = in.nextInt();
+
+							roomDAO.insertRoom(new Room(name, capacity, numberCoffe));
+
 							System.out.println("Sala do evento inserida.");
 
 						break;
@@ -117,7 +132,7 @@ public class Main {
 			case PERSON:
 				while (sMenu != SecondaryMenu.EXIT) {
 					System.out.println(
-							"Pessoa - Opções"
+							"Pessoa - OpÃ§Ãµes"
 							+ "\n1 - Cadastrar"
 							+ "\n2 - Sair");
 					try {
@@ -134,10 +149,24 @@ public class Main {
 
 					case INSERT:
 
-							System.out.println("Digite o nome da sala de café:");
-							String name = in.next();
-							coffeDAO.insertCoffe(new Coffe(name));
-							System.out.println("Sala do café inserida.");
+							System.out.println("Digite o nome da pessoa:");
+							String fName = in.next();
+
+							System.out.println("Digite o sobrenome da pessoa:");
+							String lName = in.next();
+
+							System.out.println("Listando salas");
+							List<Room> room = roomDAO.listRoom();
+							for (int i = 0; i < room.size(); i++) {
+								System.out.println(i + " " + room.get(i).getName());
+							}
+
+							System.out.println("Digite o numero da sala de evento:");
+							int numberRoom = in.nextInt();
+
+							personDAO.insertPerson(new Person(fName, lName, numberRoom));
+
+							System.out.println("Pessoa inserida.");
 
 						break;
 
@@ -146,6 +175,7 @@ public class Main {
 				
 				break;
 			}
+
 		}
 
 	}
