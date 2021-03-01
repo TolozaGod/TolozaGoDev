@@ -9,7 +9,7 @@ Meu objetivo com esse sistema é de poder possibilitar a gestão de pessoas em u
 2.	O cadastro das salas do evento, com nome e lotação;
 3.	O cadastro dos espaços de café pelo nome.
 
-Requisitos concluídos:
+Requisitos:
 
 Uma interface que permita:
 1.	O cadastro de pessoas, com nome e sobrenome;
@@ -20,6 +20,7 @@ Uma interface que permita:
 
 Outros requisitos:
 1.	Persistência de dados.
+2.	Testes unitários.
 
 Tecnologias utilizadas:
 Java, JDK, MySQL, Eclipse IDE, Git, GitHub e Trello.
@@ -28,3 +29,14 @@ Configurações:
 
 Modificar endereço da url de conexão com o banco de dados e credenciais de acesso de acordo com sua preferência, em "hibernate.cfg.xml".
 Caminho: GestaoPessoas/src/main/resources/hibernate.cfg.xml (linhas 10 e 12 e 13).
+
+Observações:
+
+Trabalho não finalizado.
+
+Requisitos concluídos:
+
+1.	O cadastro dos espaços de café com lotação;
+
+Outros requisitos:
+1.	Persistência de dados.
