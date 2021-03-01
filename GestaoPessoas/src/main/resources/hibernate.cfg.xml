@@ -9,8 +9,8 @@
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gestao_pessoas?createDatabaseIfNotExist=true&amp;useTimezone=true&amp;useTimezone=true&amp;serverTimezone=UTC</property>
 		<property name="hbm2ddl.auto">update</property>
-		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">deco2002</property>
+		<property name="hibernate.connection.username">XXX</property>
+		<property name="hibernate.connection.password">YYY</property>
 		<property name="show_sql">true</property>
 		<property name="hibernate.current_session_context_class">thread</property>
 		<mapping class="model.entity.coffe.Coffe"/>
