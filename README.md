@@ -14,7 +14,7 @@ Requisitos:
 Uma interface que permita:
 1.	O cadastro de pessoas, com nome e sobrenome;
 2.	O cadastro das salas do evento, com nome e lotação;
-3.	O cadastro dos espaços de café com lotação;
+3.	O cadastro dos espaços de café, com nome;
 4.	A consulta de cada pessoa;
 5.	A consulta de cada sala e espaço.
 
@@ -36,7 +36,9 @@ Trabalho não finalizado.
 
 Requisitos concluídos:
 
-1.	O cadastro dos espaços de café com lotação;
+1.	O cadastro de pessoas, com nome e sobrenome;
+2.	O cadastro das salas do evento, com nome e lotação;
+3.	O cadastro dos espaços de café, com nome;
 
 Outros requisitos:
 1.	Persistência de dados.
